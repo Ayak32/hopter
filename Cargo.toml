@@ -123,5 +123,5 @@ name = "test-sync-mutex-multiple_tasks_try_lock"
 path = "examples/tests/sync/mutex/multiple_tasks_try_lock.rs"
 
 [[example]]
-name = "test-sync-mutex-stress_test"
-path = "examples/tests/sync/mutex/stress_test.rs"
+name = "test-sync-mutex-10_tasks_10_edits_each"
+path = "examples/tests/sync/mutex/10_tasks_10_edits_each.rs"
