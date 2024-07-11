@@ -114,4 +114,14 @@ path = "examples/tests/sync/semaphore/10_tasks_100_up_down.rs"
 name = "test-sync-semaphore-initialization"
 path = "examples/tests/sync/semaphore/initialization.rs"
 
+[[example]]
+name = "test-sync-mutex-single_task"
+path = "examples/tests/sync/mutex/single_task.rs"
 
+[[example]]
+name = "test-sync-mutex-multiple_tasks_try_lock"
+path = "examples/tests/sync/mutex/multiple_tasks_try_lock.rs"
+
+[[example]]
+name = "test-sync-mutex-stress_test"
+path = "examples/tests/sync/mutex/stress_test.rs"
