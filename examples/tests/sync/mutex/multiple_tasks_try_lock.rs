@@ -8,7 +8,10 @@ use hopter::{boot::main, debug::semihosting, schedule, hprintln, sync::Mutex};
 fn main(_: cortex_m::Peripherals) {
     let data = "Data for the Test";
     schedule::start_task(2, move |_| task1(&data), (), 0, 4).unwrap();
-    schedule::start_task(2, move |_| task2(&data), (), 0, 4).unwrap();
+    schedule::start_task(3, move |_| task2(&data), (), 0, 4).unwrap();
+
+    schedule::change_current_task_priority(10).unwrap();
+    semihosting::terminate(true);
 
 
 }
@@ -38,7 +41,6 @@ fn task2(data: &str){
   match result {
       Some(_t) => {
           hprintln!("Mutex Locked in Task 2");
-          semihosting::terminate(true);
       },
       None => {
         hprintln!("Lock failed in Task 2");
