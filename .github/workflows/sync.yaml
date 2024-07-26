@@ -21,6 +21,6 @@ jobs:
       cookie: ${{ secrets.cookie }}
   
   channel:
-  uses: ./.github/workflows/channel.yaml
-  secrets:
-    cookie: ${{ secrets.cookie }}
+    uses: ./.github/workflows/channel.yaml
+    secrets:
+      cookie: ${{ secrets.cookie }}
